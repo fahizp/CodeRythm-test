@@ -148,7 +148,7 @@
         url: 'https://coderythm-test-server.fahiz.in/api/v1/',
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(dataToSend),
+        data: dataToSend,
         success: function(response) {
           $('header h1').text(response.data[0].text);
         },
