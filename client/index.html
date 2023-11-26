@@ -135,7 +135,7 @@
   <script>
     function handleButtonClick(step) {
       $('header h1').html('<i class="fas fa-spinner fa-spin"></i> Loading...');
-
+console.log("test1");
       const pretest = $('select[name="pretest"]').val();
       const posttest = $('select[name="post"]').val();
 
@@ -151,6 +151,7 @@
         data: dataToSend,
         success: function(response) {
           $('header h1').text(response.data[0].text);
+          console.log("test2");
         },
         error: function(error) {
           console.error('API Error:', error);
